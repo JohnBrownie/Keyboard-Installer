@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,24 @@
 		521B00871FB40FAA00AC7050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00861FB40FAA00AC7050 /* ViewController.swift */; };
 		521B00891FB40FAA00AC7050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521B00881FB40FAA00AC7050 /* Assets.xcassets */; };
 		521B008C1FB40FAA00AC7050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B008A1FB40FAA00AC7050 /* Main.storyboard */; };
+		521B00A51FB43D5E00AC7050 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00A41FB43D5E00AC7050 /* main.swift */; };
+		521B00AA1FB43D7500AC7050 /* KIFileMover in CopyFiles */ = {isa = PBXBuildFile; fileRef = 521B00A21FB43D5E00AC7050 /* KIFileMover */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		521B00AC1FB43DB000AC7050 /* KIFileOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */; };
+		521B00AE1FB43DF800AC7050 /* KIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AD1FB43DF800AC7050 /* KIErrors.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		521B00A91FB43D6C00AC7050 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				521B00AA1FB43D7500AC7050 /* KIFileMover in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		521B00811FB40FAA00AC7050 /* Keyboard Installer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Keyboard Installer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,10 +37,21 @@
 		521B00881FB40FAA00AC7050 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		521B008B1FB40FAA00AC7050 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		521B008D1FB40FAA00AC7050 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		521B00A21FB43D5E00AC7050 /* KIFileMover */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = KIFileMover; sourceTree = BUILT_PRODUCTS_DIR; };
+		521B00A41FB43D5E00AC7050 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFileOperations.swift; sourceTree = "<group>"; };
+		521B00AD1FB43DF800AC7050 /* KIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIErrors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		521B007E1FB40FAA00AC7050 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521B009F1FB43D5E00AC7050 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				521B00831FB40FAA00AC7050 /* Keyboard Installer */,
+				521B00A31FB43D5E00AC7050 /* KIFileMover */,
 				521B00821FB40FAA00AC7050 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				521B00811FB40FAA00AC7050 /* Keyboard Installer.app */,
+				521B00A21FB43D5E00AC7050 /* KIFileMover */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,8 +87,18 @@
 				521B00881FB40FAA00AC7050 /* Assets.xcassets */,
 				521B008A1FB40FAA00AC7050 /* Main.storyboard */,
 				521B008D1FB40FAA00AC7050 /* Info.plist */,
+				521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */,
+				521B00AD1FB43DF800AC7050 /* KIErrors.swift */,
 			);
 			path = "Keyboard Installer";
+			sourceTree = "<group>";
+		};
+		521B00A31FB43D5E00AC7050 /* KIFileMover */ = {
+			isa = PBXGroup;
+			children = (
+				521B00A41FB43D5E00AC7050 /* main.swift */,
+			);
+			path = KIFileMover;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -81,25 +121,46 @@
 			productReference = 521B00811FB40FAA00AC7050 /* Keyboard Installer.app */;
 			productType = "com.apple.product-type.application";
 		};
+		521B00A11FB43D5E00AC7050 /* KIFileMover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 521B00A61FB43D5E00AC7050 /* Build configuration list for PBXNativeTarget "KIFileMover" */;
+			buildPhases = (
+				521B009E1FB43D5E00AC7050 /* Sources */,
+				521B009F1FB43D5E00AC7050 /* Frameworks */,
+				521B00A91FB43D6C00AC7050 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KIFileMover;
+			productName = KIFileMover;
+			productReference = 521B00A21FB43D5E00AC7050 /* KIFileMover */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		521B00791FB40FAA00AC7050 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = KI;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "John Brownie";
 				TargetAttributes = {
 					521B00801FB40FAA00AC7050 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 3V2DRMTWC4;
+						ProvisioningStyle = Automatic;
+					};
+					521B00A11FB43D5E00AC7050 = {
+						CreatedOnToolsVersion = 8.3.2;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 521B007C1FB40FAA00AC7050 /* Build configuration list for PBXProject "Keyboard Installer" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -112,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				521B00801FB40FAA00AC7050 /* Keyboard Installer */,
+				521B00A11FB43D5E00AC7050 /* KIFileMover */,
 			);
 		};
 /* End PBXProject section */
@@ -133,8 +195,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				521B00AC1FB43DB000AC7050 /* KIFileOperations.swift in Sources */,
 				521B00871FB40FAA00AC7050 /* ViewController.swift in Sources */,
+				521B00AE1FB43DF800AC7050 /* KIErrors.swift in Sources */,
 				521B00851FB40FAA00AC7050 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		521B009E1FB43D5E00AC7050 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				521B00A51FB43D5E00AC7050 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +320,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3V2DRMTWC4;
 				INFOPLIST_FILE = "Keyboard Installer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.sil.Keyboard-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -262,11 +337,32 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 3V2DRMTWC4;
 				INFOPLIST_FILE = "Keyboard Installer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.sil.Keyboard-Installer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		521B00A71FB43D5E00AC7050 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3V2DRMTWC4;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		521B00A81FB43D5E00AC7050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = 3V2DRMTWC4;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -289,6 +385,14 @@
 			buildConfigurations = (
 				521B00911FB40FAA00AC7050 /* Debug */,
 				521B00921FB40FAA00AC7050 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		521B00A61FB43D5E00AC7050 /* Build configuration list for PBXNativeTarget "KIFileMover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				521B00A71FB43D5E00AC7050 /* Debug */,
+				521B00A81FB43D5E00AC7050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
