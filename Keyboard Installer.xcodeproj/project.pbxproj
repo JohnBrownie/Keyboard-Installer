@@ -14,7 +14,6 @@
 		521B00A51FB43D5E00AC7050 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00A41FB43D5E00AC7050 /* main.swift */; };
 		521B00AC1FB43DB000AC7050 /* KIFileOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */; };
 		521B00AE1FB43DF800AC7050 /* KIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AD1FB43DF800AC7050 /* KIErrors.swift */; };
-		5242EB5E1FB69AD2004F4BC7 /* KIFileMover in CopyFiles */ = {isa = PBXBuildFile; fileRef = 521B00A21FB43D5E00AC7050 /* KIFileMover */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +23,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				5242EB5E1FB69AD2004F4BC7 /* KIFileMover in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
