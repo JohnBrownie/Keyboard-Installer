@@ -16,23 +16,20 @@ struct KIFileOperations {
 		do {
 			try fileManager.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
 			try fileManager.copyItem(at: source, to: destination)
+			/// DANGER WILL ROBINSON -- the above call can fail to return an
+			/// error when the file is not copied.  radar filed and
+			/// closed as a DUPLICATE OF 30350792 which is still open.
+			/// As a result I must verify that the copied file exists
+			if !fileManager.fileExists(atPath: destination.path) {
+				// Copy failed
+				authenticatedCopy(from: source, to: destination, completion: handler)
+			}
 			handler(true, nil)
 		}
 		catch let theError as NSError {
 			if theError.code == NSFileWriteNoPermissionError {
 				// No permission, so we try authenticated
-				if let toolPath = Bundle.main.url(forAuxiliaryExecutable: toolName)?.path {
-					let sourcePath = source.path
-					let destPath = destination.path
-					let scriptString = "do shell script quoted form of \"\(toolPath)\" & \" \" & quoted form of \"\(sourcePath)\" & \" \" & quoted form of \"\(destPath)\" with administrator privileges"
-					let appleScript = NSAppleScript.init(source: scriptString)
-					var errorDict: NSDictionary? = NSDictionary.init()
-					appleScript?.executeAndReturnError(&errorDict)
-					handler(true, theError)
-				}
-				else {
-					handler(false, theError)
-				}
+				authenticatedCopy(from: source, to: destination, completion: handler)
 			}
 			else {
 				handler(false, theError)
@@ -40,6 +37,21 @@ struct KIFileOperations {
 		}
 		catch {
 			handler(false, NSError(domain: kKIDomain, code: errorFileOperationError.code, userInfo: [NSLocalizedDescriptionKey: error.localizedDescription]))
+		}
+	}
+	
+	static func authenticatedCopy(from source: URL, to destination: URL, completion handler:((Bool, NSError?) -> Void)) {
+		if let toolPath = Bundle.main.url(forAuxiliaryExecutable: toolName)?.path {
+			let sourcePath = source.path
+			let destPath = destination.path
+			let scriptString = "do shell script quoted form of \"\(toolPath)\" & \" \" & quoted form of \"\(sourcePath)\" & \" \" & quoted form of \"\(destPath)\" with administrator privileges"
+			let appleScript = NSAppleScript.init(source: scriptString)
+			var errorDict: NSDictionary? = NSDictionary.init()
+			appleScript?.executeAndReturnError(&errorDict)
+			handler(true, nil)
+		}
+		else {
+			handler(false, NSError(domain: kKIDomain, code: errorFileOperationError.code, userInfo: [NSLocalizedDescriptionKey: errorFileOperationError.localizedDescription]))
 		}
 	}
 }

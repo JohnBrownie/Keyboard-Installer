@@ -12,19 +12,19 @@
 		521B00891FB40FAA00AC7050 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 521B00881FB40FAA00AC7050 /* Assets.xcassets */; };
 		521B008C1FB40FAA00AC7050 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521B008A1FB40FAA00AC7050 /* Main.storyboard */; };
 		521B00A51FB43D5E00AC7050 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00A41FB43D5E00AC7050 /* main.swift */; };
-		521B00AA1FB43D7500AC7050 /* KIFileMover in CopyFiles */ = {isa = PBXBuildFile; fileRef = 521B00A21FB43D5E00AC7050 /* KIFileMover */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		521B00AC1FB43DB000AC7050 /* KIFileOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */; };
 		521B00AE1FB43DF800AC7050 /* KIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AD1FB43DF800AC7050 /* KIErrors.swift */; };
+		5242EB5E1FB69AD2004F4BC7 /* KIFileMover in CopyFiles */ = {isa = PBXBuildFile; fileRef = 521B00A21FB43D5E00AC7050 /* KIFileMover */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		521B00A91FB43D6C00AC7050 /* CopyFiles */ = {
+		5242EB5D1FB69ACD004F4BC7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
-				521B00AA1FB43D7500AC7050 /* KIFileMover in CopyFiles */,
+				5242EB5E1FB69AD2004F4BC7 /* KIFileMover in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +111,7 @@
 				521B007D1FB40FAA00AC7050 /* Sources */,
 				521B007E1FB40FAA00AC7050 /* Frameworks */,
 				521B007F1FB40FAA00AC7050 /* Resources */,
+				5242EB5D1FB69ACD004F4BC7 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -127,7 +128,6 @@
 			buildPhases = (
 				521B009E1FB43D5E00AC7050 /* Sources */,
 				521B009F1FB43D5E00AC7050 /* Frameworks */,
-				521B00A91FB43D6C00AC7050 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -387,6 +387,7 @@
 				521B00921FB40FAA00AC7050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		521B00A61FB43D5E00AC7050 /* Build configuration list for PBXNativeTarget "KIFileMover" */ = {
 			isa = XCConfigurationList;
@@ -395,6 +396,7 @@
 				521B00A81FB43D5E00AC7050 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
