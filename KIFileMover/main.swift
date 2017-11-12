@@ -20,6 +20,7 @@ let destinationURL = URL.init(fileURLWithPath: destinationPath)
 
 let fileManager = FileManager.default
 do {
+	try fileManager.createDirectory(at: destinationURL.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
 	try fileManager.copyItem(at: sourceURL, to: destinationURL)
 } catch {
 	// Don't worry about errors at this point
