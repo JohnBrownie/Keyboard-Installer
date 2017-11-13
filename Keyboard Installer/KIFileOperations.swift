@@ -15,6 +15,10 @@ struct KIFileOperations {
 		let fileManager = FileManager.default
 		do {
 			try fileManager.createDirectory(at: destination.deletingLastPathComponent(), withIntermediateDirectories: true, attributes: nil)
+			// Necessary while the bug noted below is present
+			if fileManager.fileExists(atPath: destination.path) {
+				try fileManager.removeItem(at: destination)
+			}
 			try fileManager.copyItem(at: source, to: destination)
 			/// DANGER WILL ROBINSON -- the above call can fail to return an
 			/// error when the file is not copied.  radar filed and
