@@ -681,7 +681,7 @@
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Keyboard_Installer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl" customClass="KIView" customModule="Keyboard_Installer" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -727,6 +727,10 @@
                             </textField>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="allUsersButton" destination="swN-Qi-dIx" id="1fr-Qn-aAg"/>
+                        <outlet property="currentUserButton" destination="vYk-I4-EPc" id="pin-hb-NvA"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

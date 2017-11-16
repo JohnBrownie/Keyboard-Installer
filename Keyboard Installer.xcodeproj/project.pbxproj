@@ -14,6 +14,8 @@
 		521B00A51FB43D5E00AC7050 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00A41FB43D5E00AC7050 /* main.swift */; };
 		521B00AC1FB43DB000AC7050 /* KIFileOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */; };
 		521B00AE1FB43DF800AC7050 /* KIErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B00AD1FB43DF800AC7050 /* KIErrors.swift */; };
+		52A79F2A1FBD1342005F32C3 /* KIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A79F291FBD1342005F32C3 /* KIView.swift */; };
+		52A79F2B1FBD40D3005F32C3 /* KIFileMover in CopyFiles */ = {isa = PBXBuildFile; fileRef = 521B00A21FB43D5E00AC7050 /* KIFileMover */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,6 +25,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 6;
 			files = (
+				52A79F2B1FBD40D3005F32C3 /* KIFileMover in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -39,6 +42,7 @@
 		521B00A41FB43D5E00AC7050 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		521B00AB1FB43DB000AC7050 /* KIFileOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFileOperations.swift; sourceTree = "<group>"; };
 		521B00AD1FB43DF800AC7050 /* KIErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIErrors.swift; sourceTree = "<group>"; };
+		52A79F291FBD1342005F32C3 /* KIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +86,7 @@
 			children = (
 				521B00841FB40FAA00AC7050 /* AppDelegate.swift */,
 				521B00861FB40FAA00AC7050 /* ViewController.swift */,
+				52A79F291FBD1342005F32C3 /* KIView.swift */,
 				521B00881FB40FAA00AC7050 /* Assets.xcassets */,
 				521B008A1FB40FAA00AC7050 /* Main.storyboard */,
 				521B008D1FB40FAA00AC7050 /* Info.plist */,
@@ -197,6 +202,7 @@
 				521B00871FB40FAA00AC7050 /* ViewController.swift in Sources */,
 				521B00AE1FB43DF800AC7050 /* KIErrors.swift in Sources */,
 				521B00851FB40FAA00AC7050 /* AppDelegate.swift in Sources */,
+				52A79F2A1FBD1342005F32C3 /* KIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,12 +8,19 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class ViewController: NSViewController, NSDraggingDestination {
 
+	@IBOutlet var currentUserButton: NSButton!
+	@IBOutlet var allUsersButton: NSButton!
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		// Do any additional setup after loading the view.
+	}
+	
+	override func viewDidAppear() {
+		super.viewDidAppear()
+		self.view.register(forDraggedTypes: [kUTTypeURL as String])
 	}
 
 	override var representedObject: Any? {
@@ -21,7 +28,13 @@ class ViewController: NSViewController {
 		// Update the view, if already loaded.
 		}
 	}
-
-
+	
+	@IBAction func installForAllUsers(_ sender: AnyObject) {
+		(NSApp.delegate as? AppDelegate)?.installForAllUsers(sender)
+	}
+	
+	@IBAction func installForCurrentUser(_ sender: AnyObject) {
+		(NSApp.delegate as? AppDelegate)?.installForCurrentUser(sender)
+	}
 }
 

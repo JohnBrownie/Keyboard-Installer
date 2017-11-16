@@ -46,7 +46,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		return true
 	}
 	
-	@IBAction func installForAllUsers(_ sender: AnyObject) {
+	func installForAllUsers(_ sender: AnyObject) {
 		// Install the file...
 		if let sourceURL = currentDocument {
 			let destinationURL = systemKeyboards.appendingPathComponent(currentDocument!.lastPathComponent)
@@ -63,7 +63,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 	}
 	
-	@IBAction func installForCurrentUser(_ sender: AnyObject) {
+	func installForCurrentUser(_ sender: AnyObject) {
 		// Install the file...
 		if let sourceURL = currentDocument {
 			let destinationURL = userKeyboards!.appendingPathComponent(currentDocument!.lastPathComponent)
