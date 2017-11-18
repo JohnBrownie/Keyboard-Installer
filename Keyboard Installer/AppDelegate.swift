@@ -15,7 +15,15 @@ let keyboardLayoutsName = "Keyboard Layouts"
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	var currentDocument: URL? = nil
+	var currentDocument: URL? = nil {
+		didSet {
+			// Notify the new name
+			let theWindow = NSApp.windows[0]
+			if let theView = theWindow.contentViewController as? ViewController {
+				theView.notifyNewDocument(currentDocument?.lastPathComponent ?? "")
+			}
+		}
+	}
 	
 	let systemKeyboards = URL(fileURLWithPath: systemKeyboardsPath, isDirectory: true)
 	var userKeyboards: URL? = nil

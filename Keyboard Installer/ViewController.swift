@@ -12,6 +12,8 @@ class ViewController: NSViewController, NSDraggingDestination {
 
 	@IBOutlet var currentUserButton: NSButton!
 	@IBOutlet var allUsersButton: NSButton!
+	@IBOutlet var keyboardLayoutName: NSTextField!
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
@@ -35,6 +37,10 @@ class ViewController: NSViewController, NSDraggingDestination {
 	
 	@IBAction func installForCurrentUser(_ sender: AnyObject) {
 		(NSApp.delegate as? AppDelegate)?.installForCurrentUser(sender)
+	}
+	
+	func notifyNewDocument(_ fileName: String) {
+		keyboardLayoutName.stringValue = fileName
 	}
 }
 
