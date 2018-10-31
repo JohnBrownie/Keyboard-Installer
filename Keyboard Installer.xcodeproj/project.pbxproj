@@ -152,6 +152,7 @@
 				TargetAttributes = {
 					521B00801FB40FAA00AC7050 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0940;
 						ProvisioningStyle = Automatic;
 					};
 					521B00A11FB43D5E00AC7050 = {
@@ -347,7 +348,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.sil.Keyboard-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -364,7 +366,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.sil.Keyboard-Installer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 3.0;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

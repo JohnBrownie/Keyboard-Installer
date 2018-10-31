@@ -22,7 +22,7 @@ class ViewController: NSViewController, NSDraggingDestination {
 	
 	override func viewDidAppear() {
 		super.viewDidAppear()
-		self.view.register(forDraggedTypes: [kUTTypeURL as String])
+		self.view.registerForDraggedTypes([NSPasteboard.PasteboardType(rawValue: kUTTypeURL as String)])
 	}
 
 	override var representedObject: Any? {
