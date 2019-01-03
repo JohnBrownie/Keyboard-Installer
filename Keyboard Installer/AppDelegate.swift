@@ -40,7 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		}
 		userKeyboards = userHome.appendingPathComponent(libraryName).appendingPathComponent(keyboardLayoutsName)
 	}
-
+	
 	func applicationDidFinishLaunching(_ notification: Notification) {
 		NSApp.arrangeInFront(self)
 	}
