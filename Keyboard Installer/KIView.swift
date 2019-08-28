@@ -10,7 +10,7 @@ import Cocoa
 
 class KIView: NSView {
 	override func draggingEntered(_ sender: NSDraggingInfo) -> NSDragOperation {
-		let pasteBoard = sender.draggingPasteboard()
+		let pasteBoard = sender.draggingPasteboard
 		if let draggedURLs = pasteBoard.readObjects(forClasses: [NSURL.classForCoder()], options: nil) {
 			if draggedURLs.count > 0 {
 				if let theURL = draggedURLs[0] as? URL {
@@ -24,7 +24,7 @@ class KIView: NSView {
 	}
 	
 	override func performDragOperation(_ sender: NSDraggingInfo) -> Bool {
-		let pasteBoard = sender.draggingPasteboard()
+		let pasteBoard = sender.draggingPasteboard
 		if let draggedURLs = pasteBoard.readObjects(forClasses: [NSURL.classForCoder()], options: nil) {
 			if draggedURLs.count > 0 {
 				(NSApp.delegate as? AppDelegate)?.currentDocument = draggedURLs[0] as? URL
